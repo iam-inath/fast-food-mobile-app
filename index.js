@@ -106,6 +106,7 @@ function runApplication() {
          const customerName = document.querySelector('.client-name').value
          const cardNumber = document.querySelector('.card-number').value
          const cardCvv = document.querySelector('.card-cvv').value
+         const thankYouNote = document.querySelector('.payment-completed')
          if (customerName === '') {
             document.querySelector('.name-alert').classList.add('show')
             document.querySelector('.card-alert').classList.add('hidden')
@@ -122,9 +123,11 @@ function runApplication() {
             paymentModal.style.display = 'none'
             orderSummary.style.display = 'none'
             orderButton.style.display = 'none'
-            document.querySelector(
-               '.payment-completed'
-            ).innerHTML = `Thanks, ${customerName}! Your order is on it's way`
+            thankYouNote.style.display = 'block'
+            thankYouNote.innerHTML = `Thanks, ${customerName} ! Your order is on it's way`
+            customerName = ''
+            cardNumber = ''
+            cardCvv = ''
          }
       }
       toggleHiddenClass()
