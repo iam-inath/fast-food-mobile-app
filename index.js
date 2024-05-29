@@ -62,6 +62,8 @@ function runApplication() {
             .toFixed(2)
          document.getElementById('order-summary-list').innerHTML = cartList // Renders the Cart on the page
          cartTotal.innerText = cartTotalPrice
+
+         toggleHiddenClass()
       }
       // Display Menu and add items to cart when the + button is cliqued
 
@@ -124,13 +126,16 @@ function runApplication() {
             orderSummary.style.display = 'none'
             orderButton.style.display = 'none'
             thankYouNote.style.display = 'block'
-            thankYouNote.innerHTML = `Thanks, ${customerName} ! Your order is on it's way`
-            customerName.value = ''
-            cardNumber.value = ''
-            cardCvv.value = ''
+            thankYouNote.innerHTML = `Thank you, ${customerName} ! Your order is on it's way`
+
+            document.querySelector('.client-name').value = ''
+            document.querySelector('.card-number').value = ''
+            document.querySelector('.card-cvv').value = ''
+
+            localStorage.clear()
+            runApplication()
          }
       }
-      toggleHiddenClass()
    })
    render()
 }
