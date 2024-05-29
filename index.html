@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" href="./images/hamburger.svg" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+         rel="stylesheet"
+      />
+      <title>Restaurant Mobile App</title>
+      <link href="index.css" rel="stylesheet" />
+      <script src="index.js" type="module" defer></script>
+   </head>
+   <body>
+      <main>
+         <div class="header">
+            <h1>Jimmy's Dinner</h1>
+            <h3>The best burgers and pizzas in town</h3>
+         </div>
+
+         <div class="menu">
+            <ul class="menu-list" id="menu-list">
+               <!--Code from Javascript will be displayed here-->
+            </ul>
+         </div>
+         <div class="order-summary">
+            <h3 class="hidden">Your order</h3>
+
+            <ul class="order-summary-list" id="order-summary-list">
+               <!--Code from Javascript will be displayed here-->
+
+            </ul>
+            <hr class="hidden" />
+            <div class="total cartotal hidden">
+               <div><h3 class="cart-total">Total price:</h3></div>
+               <div><h4 class="cart-total-price">$12</h4></div>
+            </div>
+         </div>
+     
+      <button class="cart-button complete-order hidden" id="complete-order">
+         Complete Order
+      </button>
+
+         </div>
+         <div class="order-payment modal">
+            <h3>Enter card details</h3>
+            <input
+               type="text"
+               class="client-name"
+               placeholder="Enter your name"
+            />
+            <p class="validation-alert name-alert">Name on the card required !</p>
+            <input
+               type="text"
+               class="card-number"
+               placeholder="Enter card number"
+            />
+            <p class="validation-alert card-alert">Card number required</p>
+            <input type="text" class="card-cvv" placeholder="Enter CVV" />
+            <p class="validation-alert cvv-alert">CVV required</p>
+
+            <button class="pay" id="pay">Pay</button>
+         </div>
+         <div class="payment-completed thank-you"><!--Code from Javascript will be displayed here-->
+         </div>
+      </main>
+   </body>
+</html>

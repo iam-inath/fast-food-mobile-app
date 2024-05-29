@@ -1,0 +1,17 @@
+{
+   "name": "fast-food-mobile-app",
+   "version": "1.0.0",
+   "type": "module",
+   "description": "Fast-Food Mobile App",
+   "main": "index.js",
+   "scripts": {
+      "start": "node index.js"
+   },
+   "keywords": [],
+   "author": "Nathan Katshi",
+   "license": "MIT",
+   "dependencies": {},
+   "pwa": {
+      "manifest": "./manifest.json"
+   }
+}
