@@ -125,9 +125,9 @@ function runApplication() {
             orderButton.style.display = 'none'
             thankYouNote.style.display = 'block'
             thankYouNote.innerHTML = `Thanks, ${customerName} ! Your order is on it's way`
-            customerName = ''
-            cardNumber = ''
-            cardCvv = ''
+            customerName.value = ''
+            cardNumber.value = ''
+            cardCvv.value = ''
          }
       }
       toggleHiddenClass()
